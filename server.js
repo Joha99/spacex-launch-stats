@@ -5,7 +5,7 @@ const schema = require("./schema");
 var app = express();
 
 // one endpoint /graphql
-// graphiql: tool used as client to make queries to server
+// graphiql is a tool used as client to make queries to another server
 app.use(
   "/graphql",
   graphqlHTTP({
