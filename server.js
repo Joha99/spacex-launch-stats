@@ -1,11 +1,11 @@
 const express = require("express");
+const cors = require("cors");
 const { graphqlHTTP } = require("express-graphql");
 const schema = require("./schema");
 
 var app = express();
+app.use(cors());
 
-// one endpoint /graphql
-// graphiql is a tool used as client to make queries to another server
 app.use(
   "/graphql",
   graphqlHTTP({
